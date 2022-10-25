@@ -1,0 +1,508 @@
+* {
+  font-family:'Klee One', cursive; 
+  outline: none; /*To remove blue outline in chrome*/
+  box-sizing: border-box;
+}
+
+/*To remove dotted outline in firefox*/
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+body {
+   margin:0;
+	padding:0;
+	font-family:"arial",heletica,sans-serif;
+	font-size:12px;
+    background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+	-webkit-animation: 10s linear 0s normal none infinite animate;
+	-moz-animation: 10s linear 0s normal none infinite animate;
+	-ms-animation: 10s linear 0s normal none infinite animate;
+	-o-animation: 10s linear 0s normal none infinite animate;
+	animation: 10s linear 0s normal none infinite animate;
+  overflow-x: hidden;
+}
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: transparent;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: white;
+ }
+ /* LOGO */
+
+.logo {
+   position: absolute;
+   height: 90px;
+   width: 90px;
+   padding-top: 5px;
+ }
+ .container{
+   max-width: 1300px;
+   margin: auto;
+   padding-left: 25px;
+   padding-right: 25px;
+}
+/* nav bar */
+
+ .navbar {
+   width: 80%;
+   min-width: 600px;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   padding: 10px 0;
+   padding-top: -10px;
+ }
+
+ .navbar ul li {
+   list-style: none;
+   margin: 0 40px;
+   display: inline-block;
+ }
+ 
+ .navbar ul li a {
+   text-decoration: none;
+   color: white;
+   font-size: 17px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   position: relative;
+ }
+ .navbar ul li a:after {
+   content: '';
+   width: 0;
+   height: 2px;
+   background: #ffffff;
+   position: absolute;
+   text-align: center;
+   left: 0;
+   bottom: 8px;
+   transition: 0.5s;
+ }
+ .navbar ul li a:hover::after {
+   width: 100%;
+ }
+
+.spacer {
+  height: 115px;
+  margin-bottom: 1vw;
+}
+
+.header {
+  color: white;
+  border-top-width: 6px;
+  border-top-style: solid;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 10px;
+  width: 100%;
+  color: rgb(255, 254, 254);
+  text-align: center;
+  height: 115px;
+}
+
+.header h1 {
+  display: table-cell;
+  text-align: center;
+  font-size: 40px;
+  padding-left: 5vw;
+  padding-top: 10px;
+}
+/* button */
+
+.add-button{
+   display: inline-flex;
+   position: fixed;
+   bottom: 5vw;
+   right: 5vw;
+   border: none;
+   height: 70px;
+   width: 70px;
+   padding: 0;
+   background-color:#ffffff;
+   color: #77A6F7;
+   cursor: pointer;
+   border-radius: 50px;
+   font-size: 20px;
+   font-weight: 50;
+}
+
+.add-button:hover {
+ background-color:#4e9bce;
+ color: white;
+}
+.button-text, .button-icon {
+   display: inline-flex;
+   align-items: center;
+   padding: 0 20px;
+   height: 100%;
+}
+.button-icon {
+   font-size: 1.5em;
+}
+
+
+@keyframes fade-in {
+  from { 
+      opacity: 0.0;
+ }
+  to {
+      opacity: 1.0;
+ }
+}
+/* note */
+
+.note {
+   position: relative;
+   width: 18.8%;
+   display: inline-block;
+   background-color:white;
+   border-radius: 15px;
+   text-align: center;
+   vertical-align: top;
+   margin: 2vw;
+   padding-bottom: 5px;
+   animation-name: fade-in;
+   animation-duration: 0.6s;
+}
+
+.note-title {
+   width: 85%;
+   height: 1.3em;
+   background-color: transparent;
+   display: inline-block;
+   text-align: center;
+   font-size: 24px;
+   font-weight: 600;
+   border: none;
+   resize: none;
+   overflow: hidden;
+   margin: 0;
+}
+
+.note-content {
+   width: 90%;
+   height: 120px;
+   background-color: transparent;
+   display: inline-block;
+   resize: none;
+   overflow: hidden;
+   border: none;
+   font-size: 16px;
+   margin: 0;
+}
+
+.option-button {
+   float: right;
+   position: relative;
+   bottom: 5px;
+   margin-right: 10px;
+   height: 30px;
+   border: none;
+   background-color: rgba(0,0,0,0);
+   font-size: 42px;
+   cursor: pointer;
+}
+
+.note-menu {
+   position: absolute;
+   bottom: 45px;
+   right: 15px;
+   z-index: 3;
+   background-color: #FFFFFF;
+   border:#77A6F7;
+   display: inline-block;
+   border-radius: 15px;
+   width: 160px;
+   padding: 5px 5px 0px 5px;
+   text-align: center;
+   animation-name: fade-in;
+   animation-duration: 0.4s;
+}
+
+.color-option {
+   display: 'inline-block';
+   height: 40px;
+   width: 40px;
+   border-radius: 20px;
+   border: 1px solid rgb(218, 214, 214);
+   margin: 5px;
+   cursor: pointer;
+}
+
+.color-option:active {
+   position: relative;
+   bottom: 5px;
+}
+
+
+.delete-note {
+   float: right;
+   position: relative;
+   bottom: 2px;
+   margin-right: 10px;
+   height: 25px;
+   border: none;
+   background-color: rgba(0,0,0,0);
+   font-size: 42px;
+   cursor: pointer;
+}
+.delete-note:active {
+   position: relative;
+   bottom: px;
+}
+
+.delete-text {
+   margin: 0px;
+   color: #993333;
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.delete-icon {
+   float: right;
+   position: relative;
+   bottom: 2px;
+   margin-right: 10px;
+   height: 25px;
+   border: none;
+   background-color: rgba(0,0,0,0);
+   font-size: 42px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 1450px) {
+   .note {
+       width: 22.75%;
+   }
+}
+
+@media screen and (max-width: 1050px) {
+   .note {
+       width: 31%;
+   }
+}
+
+@media screen and (max-width: 650px) {
+  .note {
+      width: 47.5%;
+  }
+
+  .note-menu {
+      width: 140px;
+      padding: 3px;
+  }
+
+  .color-option {
+      margin: 3px;
+  }
+
+  .header {
+      height: 100px;
+  }
+
+  .spacer {
+      height: 100px;
+  }
+
+  .note-title {
+      font-size: 18px;
+      font-weight: 600;
+      width: 80%;
+  }
+
+  .add-button, .button-icon {
+      height: 90px;
+      width: 90px;
+      font-size: 64px;
+  }
+
+  .delete-note {
+      margin: 0;
+  }
+
+  .add-button:active {
+      transform: translate(0, -10px);
+  }
+
+  .option-button {
+      font-size: 40px;
+      margin-right: 10px;
+  }
+}
+
+/* -----TODO------*/
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: #dee7f5;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: black;
+	font-size: 1.50rem;
+}
+
+#new-task-input::placeholder {
+	color: #6B7280;
+   font-size: 14px;
+}
+
+#new-task-submit {
+	color: #dee7f5;
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-color: #dee7f5;
+   font-size: 15px;
+   font-weight: bold;
+   background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 20px;
+	font-weight: 300, bold;
+	color: #dee7f5;
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: #111827;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: #EEE;
+	font-size: 16px;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: #EC4899;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+   font-weight: bold;
+   font-size: 13px;
+	background-color: #dee7f5;
+   background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: crimson;
+   font-size: 13px;
+   font-weight: bold;
+}
